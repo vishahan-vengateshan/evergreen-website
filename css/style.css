@@ -108,7 +108,7 @@ nav a:hover {
 }
 
 .product-item img {
-  width: 100px;
+  width: 150px;
   height: auto;
   margin-bottom: 15px;
   filter: grayscale(100%);
