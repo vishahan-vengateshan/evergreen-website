@@ -1,4 +1,6 @@
-// Mobile menu toggle, right-aligned hamburger animation, and anchor scroll offset
+// Mobile menu toggle, right-aligned hamburger animation,
+// dynamic header offset, anchor scrolling with sticky-header offset,
+// and logo click to hero.
 
 (function () {
   function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
@@ -18,7 +20,7 @@
     const target = qs(id);
     if (!target) return;
     const y = window.scrollY + target.getBoundingClientRect().top;
-    const offset = headerHeight() + 8; // small buffer so H2 is fully visible
+    const offset = headerHeight() + 8; // ensure the H2 or hero title is fully visible
     window.scrollTo({ top: Math.max(0, y - offset), behavior: 'smooth' });
   }
 
@@ -61,8 +63,33 @@
     });
   }
 
+  function setupLogoScroll() {
+    const logo = qs('a.logo-link[href^="#"]');
+    if (!logo) return;
+
+    logo.addEventListener('click', function (e) {
+      const href = logo.getAttribute('href');
+      if (!href || href.length < 2) return;
+      e.preventDefault();
+
+      // Close mobile menu if open
+      const nav = qs('#site-nav');
+      const btn = qs('.menu-toggle');
+      if (nav && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        if (btn) {
+          btn.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      smoothScrollToId(href);
+    });
+  }
+
   function init() {
     setupMenuToggle();
+    setupLogoScroll();
     adjustBodyOffset();
     window.addEventListener('resize', adjustBodyOffset);
   }

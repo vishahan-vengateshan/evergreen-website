@@ -33,6 +33,13 @@ header {
 
 header img { height: 60px; }
 
+/* Make the logo anchor align with the image for perfect centering in header */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+
 /* Desktop: nav inline on right */
 nav {
   margin-left: auto;
