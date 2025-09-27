@@ -8,14 +8,28 @@
 </head>
 <body>
 
-<header>
+  <header>
+    <img src="images/edited_logo.svg" alt="Evergreen Transmission Logo" />
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="site-nav">
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+<!--<header>
   <img src="images/edited_logo.svg" alt="Evergreen Transmission Logo" />
   <nav>
     <a href="#about">About Us</a>
     <a href="#products">Products</a>
     <a href="#contact">Contact Us</a>
   </nav>
-</header>
+</header>-->
 
 <section class="hero">
   <h1>Premium Industrial Transmission Solutions</h1>
@@ -57,7 +71,7 @@
   </div>
 </section>
 
-<section class="content-section">
+<section id ="partners" class="content-section">
   <h2>Authorized Channel Partner</h2>
   <div class="partners">
     <div class="partner-item">
@@ -104,12 +118,12 @@
     Phone: +91-XXXXXXXXXX | Email: info@evergreentransmission.com<br />
     Address: Vilankurichi, Coimbatore, Tamil Nadu, India
   </p>
-  <form id="contact-form" action="mailto:info@evergreentransmission.com" method="POST" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+    <form id="contact-form" action="mailto:info@evergreentransmission.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 </section>
 
 <footer>
