@@ -63,7 +63,8 @@ nav a:hover {
 }
 
 .hero .btn {
-  background: #3a8030;
+  background:#3a8030;
+  /*#3a8030*//*#0F5EAC*/
   color: white;
   padding: 14px 30px;
   font-size: 1em;
@@ -74,7 +75,7 @@ nav a:hover {
 }
 
 .hero .btn:hover {
-  background: #2a6222;
+  background:#2a6222;
 }
 
 /* ========== Content Sections ========== */
@@ -111,12 +112,12 @@ nav a:hover {
   width: 150px;
   height: auto;
   margin-bottom: 15px;
-  filter: grayscale(100%);
+  /*filter: grayscale(100%);*/
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .product-item img:hover {
-  filter: grayscale(0%);
+  /*filter: grayscale(0%);*/
   transform: scale(1.05);
 }
 
@@ -152,7 +153,7 @@ nav a:hover {
 
 .partner-item img {
   max-width: 100%;
-  max-height: 60px;
+  max-height: 70px;
   object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
