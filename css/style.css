@@ -281,6 +281,36 @@ form button {
 
 form button:hover { background: #c9e1c8; }
 
+/* ===========whatsapp========= */
+
+#whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1500;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+#whatsapp-float:hover {
+  background-color: #25d366; /* WhatsApp green */
+}
+
+#whatsapp-float img {
+  width: 35px;
+  height: 35px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+}
+
+
 /* ========== Footer ========== */
 
 footer {

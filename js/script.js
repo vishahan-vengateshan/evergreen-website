@@ -100,3 +100,21 @@
     init();
   }
 })();
+
+// whatsapp code
+// WhatsApp floating icon click handler
+(function () {
+  const whatsappFloat = document.getElementById('whatsapp-float');
+  if (!whatsappFloat) return;
+
+  // Replace with your phone number here, in international format without + or leading zeros
+  // Example: 919999999999
+  const phoneNumber = '9112345678910';
+
+  whatsappFloat.addEventListener('click', function (e) {
+    e.preventDefault();
+    // WhatsApp URL schema for web and mobile
+    const url = `https://wa.me/${phoneNumber}`;
+    window.open(url, '_blank', 'noopener');
+  });
+})();
