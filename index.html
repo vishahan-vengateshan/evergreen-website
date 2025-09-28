@@ -115,6 +115,7 @@
   </p>
     <form id="contact-form" action="mailto:info@evergreentransmission.com" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="mobile" id="mobile" inputmode="numeric" pattern="^\d{10}$" maxlength="10" placeholder="Mobile Number (optional)" />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
       <button type="submit">Send Message</button>

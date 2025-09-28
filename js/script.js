@@ -1,8 +1,10 @@
 // Mobile menu toggle, right-aligned hamburger animation,
 // dynamic header offset, anchor scrolling with sticky-header offset,
-// and logo click to hero.
+// logo click to hero, optional 10-digit mobile validation,
+// and WhatsApp floating button handler.
 
 (function () {
+  // ---------- helpers ----------
   function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
   function qsa(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
 
@@ -24,6 +26,7 @@
     window.scrollTo({ top: Math.max(0, y - offset), behavior: 'smooth' });
   }
 
+  // ---------- navigation ----------
   function setupMenuToggle() {
     const btn = qs('.menu-toggle');
     const nav = qs('#site-nav');
@@ -87,9 +90,46 @@
     });
   }
 
+  // ---------- optional mobile number validation ----------
+  function setupMobileValidation() {
+    const form = qs('form');
+    const mobile = qs('#mobile');
+    if (!form || !mobile) return;
+
+    function isValidMobile(val) {
+      return /^\d{10}$/.test(val);
+    }
+
+    // Keep only digits and cap at 10
+    mobile.addEventListener('input', function () {
+      const digits = mobile.value.replace(/\D+/g, '').slice(0, 10);
+      if (mobile.value !== digits) mobile.value = digits;
+      mobile.setCustomValidity('');
+    });
+
+    // Validate on blur if user entered something
+    mobile.addEventListener('blur', function () {
+      if (mobile.value && !isValidMobile(mobile.value)) {
+        mobile.setCustomValidity('Enter a 10-digit mobile number');
+      } else {
+        mobile.setCustomValidity('');
+      }
+    });
+
+    // Validate on submit only if field is filled (field is optional)
+    form.addEventListener('submit', function (e) {
+      if (mobile.value && !isValidMobile(mobile.value)) {
+        e.preventDefault();
+        mobile.reportValidity();
+      }
+    });
+  }
+
+  // ---------- init ----------
   function init() {
     setupMenuToggle();
     setupLogoScroll();
+    setupMobileValidation();
     adjustBodyOffset();
     window.addEventListener('resize', adjustBodyOffset);
   }
@@ -101,19 +141,17 @@
   }
 })();
 
-// whatsapp code
-// WhatsApp floating icon click handler
+// ---------- WhatsApp floating icon ----------
 (function () {
   const whatsappFloat = document.getElementById('whatsapp-float');
   if (!whatsappFloat) return;
 
-  // Replace with your phone number here, in international format without + or leading zeros
+  // Replace with your phone number here, in international format without + or spaces
   // Example: 919999999999
-  const phoneNumber = '9112345678910';
+  const phoneNumber = '919003790287';
 
   whatsappFloat.addEventListener('click', function (e) {
     e.preventDefault();
-    // WhatsApp URL schema for web and mobile
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, '_blank', 'noopener');
   });

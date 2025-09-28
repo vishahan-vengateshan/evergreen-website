@@ -39,7 +39,6 @@ header img { height: 60px; }
   align-items: center;
 }
 
-
 /* Desktop: nav inline on right */
 nav {
   margin-left: auto;
@@ -253,8 +252,10 @@ section,
   font-size: 1.1em;
 }
 
+/* Keep form centered with a natural text alignment for fields on desktop */
 form {
   max-width: 400px;
+  width: 100%;              /* ensure a consistent column */
   margin: 0 auto;
   text-align: left;
 }
@@ -262,6 +263,7 @@ form {
 form input,
 form textarea {
   width: 100%;
+  box-sizing: border-box;   /* prevent overflow from padding */
   padding: 10px;
   margin-bottom: 15px;
   border: none;
@@ -269,11 +271,13 @@ form textarea {
 }
 
 form button {
+  display: block;           /* take full line like inputs */
+  width: 100%;              /* match input/textarea width */
+  box-sizing: border-box;   /* padding won’t shrink visible width */
   background: #e5f2e8;
   color: #3a8030;
   font-weight: bold;
   padding: 12px;
-  width: 100%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -281,7 +285,8 @@ form button {
 
 form button:hover { background: #c9e1c8; }
 
-/* ===========whatsapp========= */
+
+/* =========== WhatsApp Floating Button ========= */
 
 #whatsapp-float {
   position: fixed;
@@ -300,16 +305,13 @@ form button:hover { background: #c9e1c8; }
   transition: background-color 0.3s;
 }
 
-#whatsapp-float:hover {
-  background-color: #25d366; /* WhatsApp green */
-}
+#whatsapp-float:hover { background-color: #25d366; /* WhatsApp green */ }
 
 #whatsapp-float img {
   width: 35px;
   height: 35px;
   filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
 }
-
 
 /* ========== Footer ========== */
 
@@ -357,4 +359,55 @@ footer {
     filter: grayscale(0%);
     transform: none;
   }
+
+ 
+    /* Contact section: centered with safe gutters */
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      /* add gentle gutters so fields don't touch screen edges */
+      padding-left: 16px;
+      padding-right: 16px;
+  
+      text-align: center;
+    }
+  
+    /* Inner container fills width but respects gutters */
+    .contact-section .content-section {
+      width: 100%;
+      max-width: 440px;   /* slightly wider than the 400px form to allow headings */
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    /* Form stays centered with a bit of breathing space */
+    form {
+      width: 100%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  
+    /* Inputs respect container width and get rounded edges if desired */
+    form input,
+    form textarea,
+    form button {
+      width: 100%;
+      box-sizing: border-box; /* ensures padding doesn't overflow */
+      border-radius: 8px;
+    }
+  
+    /* Optional: add small vertical spacing consistency */
+    form input,
+    form textarea {
+      margin-bottom: 14px;
+    }
+  
+  
 }
