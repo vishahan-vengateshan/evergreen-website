@@ -410,6 +410,16 @@ footer {
   text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,.22);
   transition: background .25s ease, transform .15s ease;
 }
+#back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 #back-to-top:hover { background: #3a8030;  color: #ffffff; transform: translateY(-2px); }
 #back-to-top span { font-size: 26px; line-height: 1; font-weight: 700; /* bolder arrow for visibility */}
 

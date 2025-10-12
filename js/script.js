@@ -136,12 +136,36 @@ function setupBackToTop() {
   }
   });
   }
+
+  //back to top hide/unhide fucntion
+  function setupBackToTopVisibility() {
+    const backToTop = document.getElementById('back-to-top');
+    const heroSection = document.getElementById('hero');
+    if (!backToTop || !heroSection) return;
+  
+    function updateBackToTopVisibility() {
+      // Find distance from hero section's bottom to top of viewport
+      const rect = heroSection.getBoundingClientRect();
+      if (rect.bottom < 0) {
+        // Hero section is completely above the viewport
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }
+  
+    window.addEventListener('scroll', updateBackToTopVisibility);
+    // Run once at load
+    updateBackToTopVisibility();
+  }
+  
   // ---------- init ----------
   function init() {
     setupMenuToggle();
     setupLogoScroll(); // now reloads the page
     setupMobileValidation();
     setupBackToTop(); // new addition; safe if element absent
+    setupBackToTopVisibility(); 
     adjustBodyOffset();
     window.addEventListener('resize', adjustBodyOffset);
   }
