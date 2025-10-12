@@ -124,12 +124,24 @@
       }
     });
   }
-
+// ---------- Back-to-Top floater -> scroll to #hero (new, minimal) ----------
+function setupBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  btn.addEventListener('click', function (e) {
+  const href = btn.getAttribute('href');
+  if (href && href.startsWith('#')) {
+  e.preventDefault();
+  smoothScrollToId(href);
+  }
+  });
+  }
   // ---------- init ----------
   function init() {
     setupMenuToggle();
-    setupLogoScroll();
+    setupLogoScroll(); // now reloads the page
     setupMobileValidation();
+    setupBackToTop(); // new addition; safe if element absent
     adjustBodyOffset();
     window.addEventListener('resize', adjustBodyOffset);
   }

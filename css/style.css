@@ -289,27 +289,15 @@ form button:hover { background: #c9e1c8; }
 /* =========== WhatsApp Floating Button ========= */
 
 #whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1500;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed; bottom: 100px; right: 20px; z-index: 1500;
+  width: 60px; height: 60px; cursor: pointer; border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  background: white; display: flex; justify-content: center; align-items: center;
   transition: background-color 0.3s;
 }
-
 #whatsapp-float:hover { background-color: #25d366; /* WhatsApp green */ }
-
-#whatsapp-float img {
-  width: 35px;
-  height: 35px;
+#whatsapp-float img, #whatsapp-float svg {
+  width: 34px; height: 34px; display: block;
   filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
 }
 
@@ -411,3 +399,17 @@ footer {
   
   
 }
+
+
+/* === Targeted additions: Back-to-Top floater (aligned with WhatsApp) === */
+
+#back-to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 1499;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #ffffff;  color: #3a8030; display: flex; align-items: center; justify-content: center;
+  text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,.22);
+  transition: background .25s ease, transform .15s ease;
+}
+#back-to-top:hover { background: #3a8030;  color: #ffffff; transform: translateY(-2px); }
+#back-to-top span { font-size: 26px; line-height: 1; font-weight: 700; /* bolder arrow for visibility */}
+
