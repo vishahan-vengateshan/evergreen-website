@@ -26,6 +26,7 @@
     window.scrollTo({ top: Math.max(0, y - offset), behavior: 'smooth' });
   }
 
+
   // ---------- navigation ----------
   function setupMenuToggle() {
     const btn = qs('.menu-toggle');

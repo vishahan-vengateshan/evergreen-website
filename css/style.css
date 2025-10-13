@@ -335,10 +335,10 @@ form button:hover { background: #c9e1c8; }
   box-shadow: 0 1px 6px rgba(0,0,0,0.10);
 }
 
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
   .contact-row { flex-direction: column; gap: 20px; }
   .contact-card, .form-card { max-width: 98vw; margin: 0 auto; }
-}
+}*/
 
 
 /* =========== WhatsApp Floating Button ========= */
@@ -452,7 +452,8 @@ footer {
       margin-bottom: 14px;
     }
   
-  
+  .contact-row { flex-direction: column; gap: 30px; }
+  .contact-card, .form-card { max-width: 98vw; margin: 0 auto; }
 }
 
 
