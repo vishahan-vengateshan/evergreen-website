@@ -193,3 +193,84 @@ function setupBackToTop() {
     window.open(url, '_blank', 'noopener');
   });
 })();
+
+
+// ---- Google Forms bridge (using your real IDs) ----
+(function setupGoogleFormBridge() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSfm4KqSHKhxAMI6A2FLNHqJ-H_JCZ4NBdsup3XXJDeLKvyGig/formResponse';
+
+  const map = {
+    name:    'entry.511196757',
+    mobile:  'entry.1678160039',
+    email:   'entry.1408178537',
+    message: 'entry.850678214'
+  };
+
+  // Optional honeypot (keeps your UI/validation unchanged)
+  let hp = form.querySelector('input[name="company"]');
+  if (!hp) {
+    hp = document.createElement('input');
+    hp.type = 'text';
+    hp.name = 'company';
+    hp.autocomplete = 'off';
+    hp.tabIndex = -1;
+    hp.style.position = 'absolute';
+    hp.style.left = '-9999px';
+    form.appendChild(hp);
+  }
+
+  form.addEventListener('submit', function(e) {
+    if (!form.checkValidity()) return; // preserve your existing validations
+    e.preventDefault();
+
+    if (hp && hp.value) { alert('Submission blocked.'); return; }
+
+    const fd = new FormData(form);
+    const payload = new FormData();
+    payload.append(map.name,    (fd.get('name') || '').toString().trim());
+    payload.append(map.mobile,  (fd.get('mobile') || '').toString().trim());
+    payload.append(map.email,   (fd.get('email') || '').toString().trim());
+    payload.append(map.message, (fd.get('message') || '').toString().trim());
+
+    const btn = form.querySelector('button[type="submit"]');
+    const prev = btn?.textContent;
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+
+    const iframe = document.createElement('iframe');
+    iframe.name = 'gform_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    const ghost = document.createElement('form');
+    ghost.action = ACTION;
+    ghost.method = 'POST';
+    ghost.target = 'gform_iframe';
+    ghost.style.display = 'none';
+
+    for (const [k, v] of payload.entries()) {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = k;
+      input.value = v;
+      ghost.appendChild(input);
+    }
+
+    document.body.appendChild(ghost);
+
+    const cleanup = () => {
+      ghost.remove();
+      iframe.remove();
+      if (btn) { btn.disabled = false; btn.textContent = prev || 'Send Message'; }
+      alert('Thanks! Your message was sent.');
+      form.reset();
+    };
+
+    iframe.addEventListener('load', cleanup);
+    ghost.submit();
+
+    setTimeout(() => { if (document.body.contains(ghost)) cleanup(); }, 2000);
+  });
+})();
