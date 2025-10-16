@@ -318,6 +318,31 @@ function loadProductCategory(category) {
             `;
             break;
         // Add similar cases for each new category as you add products
+        case 'electric-motor':
+            html += `
+                <div class="product-item">
+                    <img src="images/three-phase-electric-motor.webp" alt="Three Phase Motor">
+                    <h3>Three Phase Motor</h3>
+                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/nord-single-phase-motors.webp" alt="Nord Single Phase Motor">
+                    <h3>Nord Single Phase Motor</h3>
+                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                </div>
+                 <div class="product-item">
+                    <img src="images/three-phase-motor.webp" alt="Three Phase Electric Motor">
+                    <h3>Three Phase Electric Motor</h3>
+                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                </div>
+                 <div class="product-item">
+                    <img src="images/single-phase-industrial-motor.webp" alt="Single Phase Industrial Motor">
+                    <h3>Single Phase Industrial Motor</h3>
+                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                </div>
+               
+            `;
+            break;
         default:
             html = initialProducts;
     }
