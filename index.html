@@ -19,10 +19,10 @@
       <span class="bar"></span>
     </button>
     <nav id="site-nav">
-      <a href="#about">About Us</a>
-      <a href="#products">Products</a>
-      <a href="#partners">Partners</a>
-      <a href="#contact">Contact Us</a>
+      <a href="#about" onclick="loadInitialProducts()" >About Us</a>
+      <a href="#products" onclick="loadInitialProducts()">Products</a>
+      <a href="#partners" onclick="loadInitialProducts()">Partners</a>
+      <a href="#contact" onclick="loadInitialProducts()">Contact Us</a>
       <a href="assets/evergreen-transmission.pdf" download="Evergreen-Brochure.pdf">e-Brochure</a>
     </nav>
   </header>
@@ -42,9 +42,9 @@
 
 <!-- Products -->
 <section id="products" class="content-section">
-  <h2>Our Products</h2>
+  <h2 id="our-products" onclick="loadInitialProducts()" style="cursor:pointer;">Our Products</h2>
   <div class="products">
-    <div class="product-item">
+    <div class="product-item" onclick="loadProductCategory('worm-gear')">
       <img src="images/edit_1.webp" alt="Worm Gear Motor" />
       <h3>Nord Gear Motors</h3>
       <p>Durable and efficient gear motors for industrial machinery applications.</p>

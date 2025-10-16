@@ -274,3 +274,55 @@ function setupBackToTop() {
     setTimeout(() => { if (document.body.contains(ghost)) cleanup(); }, 2000);
   });
 })();
+
+
+// ---------- Product Loading and Category Switching ----------
+const initialProducts = document.querySelector('#products .products').innerHTML;
+
+function loadInitialProducts() {
+    const productsContainer = document.querySelector('#products .products');
+    productsContainer.innerHTML = initialProducts;
+}
+
+function loadProductCategory(category) {
+    const productsContainer = document.querySelector('#products .products');
+    let html = '';
+
+    switch (category) {
+        case 'worm-gear':
+            html += `
+                <div class="product-item" onclick="loadProductCategory('worm-gear')">
+                    <img src="images/edit1.webp" alt="Worm Gear Motor">
+                    <h3>Worm Gear Motors</h3>
+                    <p>High-efficiency worm gear motors for industrial-duty applications.</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Helical Gearbox">
+                    <h3>Compact Worm Motor</h3>
+                    <p>Durable worm-drive systems for diverse industrial machinery.</p>
+                </div>
+            `;
+            break;
+        case 'helical':
+            html += `
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Helical Gearbox">
+                    <h3>Helical Gearboxes</h3>
+                    <p>High-performance gearboxes designed for smooth operation and longevity.</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/edit1.webp" alt="Worm Gear Motor">
+                    <h3>Inline Helical Drive</h3>
+                    <p>Precision-designed drives for consistent torque and low noise.</p>
+                </div>
+            `;
+            break;
+        // Add similar cases for each new category as you add products
+        default:
+            html = initialProducts;
+    }
+
+    productsContainer.innerHTML = html;
+    window.scrollTo({ top: document.getElementById('products').offsetTop - 80, behavior: 'smooth' });
+}
+
