@@ -186,6 +186,11 @@ section,
   margin-bottom: 12px;
 }
 
+.product-item ul {
+  text-align: left;
+  margin-left: 0; /* Optional for proper left position */
+  padding-left: 1.2em; /* Optional for standard bullet indent */
+}
 /* ========== Partner Section ========== */
 
 .partners {

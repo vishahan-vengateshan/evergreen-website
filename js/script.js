@@ -343,6 +343,39 @@ function loadProductCategory(category) {
                
             `;
             break;
+            case 'asynchronous-electric-motor':
+            html += `
+                <div class="product-item">
+                    <img src="images/standard-motors-asynchronous-motors-1.webp" alt="Nord Standard Asynchronous Motor">
+                    <h3>Nord Standard Asynchronous Motor</h3>
+                    <p>
+                     <ul>
+                      <li>Power <b>45kW</b></li>
+                      <li>Speed <b>1400RPM</b></li>
+                      <li>Motor Voltage <b>415V</b></li>
+                      <li>No Of Phase <b>Three Phase</b></li>
+                      <li>Type <b>Hight Voltage</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>IP Rating <b>IP66</b></li>
+                      <li>Efficiency Class <b>IE3</b></li>
+                    </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/nord-single-phase-motors.webp" alt="Nord Standard Asynchronous Motor">
+                    <h3>Nord Standard Asynchronous Motor</h3>
+                     <p>
+                     <ul>
+                      <li>Power <b>45kW</b></li>
+                      <li>No Of Phase <b>Single Phase</b></li>
+                      <li>No Of Poles <b>2</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Country of Origin <b>India</b></li>
+                    </ul>  
+                    </p>
+                </div>
+            `;
+            break;
         default:
             html = initialProducts;
     }
