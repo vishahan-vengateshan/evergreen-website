@@ -292,7 +292,7 @@ function loadProductCategory(category) {
         case 'worm-gear':
             html += `
                 <div class="product-item" onclick="loadProductCategory('worm-gear')">
-                    <img src="images/edit1.webp" alt="Worm Gear Motor">
+                    <img src="images/edit_1.webp" alt="Worm Gear Motor">
                     <h3>Worm Gear Motors</h3>
                     <p>High-efficiency worm gear motors for industrial-duty applications.</p>
                 </div>
@@ -323,22 +323,63 @@ function loadProductCategory(category) {
                 <div class="product-item">
                     <img src="images/three-phase-electric-motor.webp" alt="Three Phase Motor">
                     <h3>Three Phase Motor</h3>
-                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                    <p>
+                      <ul>
+                      <li>Power <b>55kW</b></li>
+                      <li>Speed <b>1440RPM</b></li>
+                      <li>No Of Poles <b>4</b></li>
+                      <li>Voltage <b>415V</b></li>
+                      </ul>  
+                    </p>
                 </div>
                 <div class="product-item">
                     <img src="images/nord-single-phase-motors.webp" alt="Nord Single Phase Motor">
                     <h3>Nord Single Phase Motor</h3>
-                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                    <p>
+                      <ul>
+                      <li>Power <b>45kW</b></li>
+                      <li>Speed <b>750RPM</b></li>
+                      <li>No Of Poles <b>2</b></li>
+                      <li>Voltage <b>220V</b></li>
+                      <li>Frequency <b>50Hz</b></li>
+                      <li>Brand <b>Nord</b></li>
+                    </ul>  
+                    </p>
                 </div>
-                 <div class="product-item">
+                <div class="product-item">
                     <img src="images/three-phase-motor.webp" alt="Three Phase Electric Motor">
                     <h3>Three Phase Electric Motor</h3>
-                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                    <p>
+                      <ul>
+                      <li>Power <b>45kW</b></li>
+                      <li>Speed <b>1440RPM</b></li>
+                      <li>No Of Poles <b>4</b></li>
+                      <li>Voltage <b>415V</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/three-phase-motor.webp" alt="Three Phase Electric Motor">
+                    <h3>Three Phase Electric Motor</h3>
+                    <p>
+                      <ul>
+                      <li>Power <b>45kW</b></li>
+                      <li>Horsepower <b>20HP</b></li>
+                      </ul>  
+                    </p>
                 </div>
                  <div class="product-item">
                     <img src="images/single-phase-industrial-motor.webp" alt="Single Phase Industrial Motor">
                     <h3>Single Phase Industrial Motor</h3>
-                    <p>The new and energy-efficient universal motor from Nord drive system extends the motor portfolio for the most important world markets such as Europe, USA, Canada or China.</p>
+                    <p>
+                      <ul>
+                      <li>Power <b>44kW</b></li>
+                      <li>Speed <b>750RPM</b></li>
+                      <li>No Of Poles <b>2</b></li>
+                      <li>Voltage <b>220V</b></li>
+                       <li>Frequency <b>50hz</b></li>
+                      </ul>  
+                    </p>
                 </div>
                
             `;
@@ -376,6 +417,104 @@ function loadProductCategory(category) {
                 </div>
             `;
             break;
+            case 'synchronous-motors':
+              html += `
+                  <div class="product-item">
+                      <img src="images/nord-tefc-synchronous-motor.webp" alt="Synchronous Motors">
+                      <h3>Nord Standard Asynchronous Motor</h3>
+                      <p>
+                       <ul>
+                        <li>Power <b>4kW</b></li>
+                        <li>Horsepower <b>2HP</b></li>
+                        <li>Speed <b>2800 rpm</b></li>
+                        <li>No Of Phase <b>Three Phase</b></li>
+                        <li>Voltage <b>415V</b></li>
+                        <li>Frquency <b>60Hz</b></li>
+                        <li>Brand <b>Nord</b></li>
+                        <li>Model <b>synchronous</b></li>
+                        <li>No Of Poles <b>4</b></li>
+                      </ul>  
+                      </p>
+                  </div>
+                  <div class="product-item">
+                      <img src="images/nord-tefc-synchronous-motor.webp" alt="Synchronous Motors">
+                      <h3>Nord Standard Asynchronous Motor</h3>
+                       <p>
+                       <ul>
+                        <li>Power <b>4kW</b></li>
+                        <li>Horsepower <b>2HP</b></li>
+                        <li>Speed <b>750 rpm</b></li>
+                        <li>No Of Phase <b>Single Phase</b></li>
+                        <li>Voltage <b>220V</b></li>
+                        <li>Frquency <b>50Hz</b></li>
+                        <li>Brand <b>Nord</b></li>
+                        <li>Model <b>synchronous</b></li>
+                        <li>No Of Poles <b>4</b></li>
+                      </ul>  
+                      </p>
+                  </div>
+              `;
+              break;
+              case 'explosion-proof-motor':
+                html += `
+                    <div class="product-item">
+                        <img src="images/nord-dust-explosion-protected-motor2.webp" alt="Nord Gas Explosion Protected Motor">
+                        <h3>Nord Gas Explosion Protected Motor</h3>
+                        <p>
+                         <ul>
+                          <li>Power <b>22kW</b></li>
+                          <li>Brand <b>Nord</b></li>
+                          <li>Voltage <b>415V</b></li>
+                          <li>Frquency <b>50Hz</b></li>
+                          <li>Product Type <b>Gas Explosion Protected Motor</b></li>
+                        </ul>  
+                        </p>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/nord-dust-explosion-protected-motor2.webp" alt="Nord Dust Explosion Protected Motor">
+                        <h3>Nord Dust Explosion Protected Motor</h3>
+                        <p>
+                         <ul>
+                          <li>Power <b>22kW</b></li>
+                          <li>Brand <b>Nord</b></li>
+                          <li>Voltage <b>415V</b></li>
+                          <li>Frquency <b>50Hz</b></li>
+                          <li>Product Type <b>Dust Explosion Protected Motor</b></li>
+                        </ul>  
+                        </p>
+                    </div>
+                `;
+                break;
+                case 'variable-frequency-drive-inverter':
+                  html += `
+                      <div class="product-item">
+                          <img src="images/nord-dust-explosion-protected-motor2.webp" alt="Nord Gas Explosion Protected Motor">
+                          <h3>Nord Gas Explosion Protected Motor</h3>
+                          <p>
+                           <ul>
+                            <li>Power <b>22kW</b></li>
+                            <li>Brand <b>Nord</b></li>
+                            <li>Voltage <b>415V</b></li>
+                            <li>Frquency <b>50Hz</b></li>
+                            <li>Product Type <b>Gas Explosion Protected Motor</b></li>
+                          </ul>  
+                          </p>
+                      </div>
+                      <div class="product-item">
+                          <img src="images/nord-dust-explosion-protected-motor2.webp" alt="Nord Dust Explosion Protected Motor">
+                          <h3>Nord Dust Explosion Protected Motor</h3>
+                          <p>
+                           <ul>
+                            <li>Power <b>22kW</b></li>
+                            <li>Brand <b>Nord</b></li>
+                            <li>Voltage <b>415V</b></li>
+                            <li>Frquency <b>50Hz</b></li>
+                            <li>Product Type <b>Dust Explosion Protected Motor</b></li>
+                          </ul>  
+                          </p>
+                      </div>
+                  `;
+                  break;
         default:
             html = initialProducts;
     }
