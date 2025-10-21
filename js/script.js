@@ -289,18 +289,230 @@ function loadProductCategory(category) {
     let html = '';
 
     switch (category) {
-        case 'worm-gear':
+        case 'nord-gear-motors':
             html += `
-                <div class="product-item" onclick="loadProductCategory('worm-gear')">
-                    <img src="images/edit_1.webp" alt="Worm Gear Motor">
-                    <h3>Worm Gear Motors</h3>
-                    <p>High-efficiency worm gear motors for industrial-duty applications.</p>
+                <div class="product-item">
+                    <img src="images/edit_1.webp" alt="Nord Unicase Inline Helical Geared Motors">
+                    <h3>Nord Unicase Inline Helical Geared Motors</h3>
+                    <p>
+                      <ul>
+                      <li>Power <b>7.5kW</b></li>
+                      <li>Rate Speed <b>90RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Unicase Inline</b></li>
+                      </ul>  
+                    </p>                 
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Helical Gearbox">
-                    <h3>Compact Worm Motor</h3>
-                    <p>Durable worm-drive systems for diverse industrial machinery.</p>
+                    <img src="images/helical-gear-box.webp" alt="Nord Unicase Parallel Shaft Gear Motors">
+                    <h3>Nord Unicase Parallel Shaft Gear Motors</h3>
+                    <p>
+                      <ul>
+                      <li>Power <b>2.2kW</b></li>
+                      <li>Rate Speed <b>90RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Unicase Parallel</b></li>
+                      </ul>  
+                    </p>   
                 </div>
+                <div class="product-item">
+                    <img src="images/edit_1.webp" alt="Nord B5010 DuoDrive Geared Motor">
+                    <h3>Nord B5010 DuoDrive Geared Motor</h3>
+                    <p>
+                      <ul>
+                      <li>Power <b>3kW</b></li>
+                      <li>Rate Speed <b>1440RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>440V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>B5010</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Nord Max Drive XC Right Angle Gear Motor">
+                    <h3>Nord Max Drive XC Right Angle Gear Motor</h3>
+                    <p>
+                      <ul>
+                      <li>Power <b>140kW</b></li>
+                      <li>Rate Speed <b>1800RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Used in heavy-duty industrial applications</b></li>
+                      <li>Phase <b>3 Phase</b></li>
+                      <li>Voltage <b>415 V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Max Drive XC</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/edit_1.webp" alt="Nord Max Drive XC Parallel Shaft Gear Motor">
+                    <h3>Nord Max Drive XC Parallel Shaft Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>55kW</b></li>
+                      <li>Rate Speed <b>3000RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415 V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Max Drive XC</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Nord Unicase Worm Gear Motor">
+                    <h3>Nord Unicase Worm Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>15kW</b></li>
+                      <li>Rate Speed <b>90RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415 V</b></li>
+                      <li>Model <b>Unicase</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/edit_1.webp" alt="Nord Bloc 1 Bevel Geared Motor">
+                    <h3>Nord Bloc 1 Bevel Geared Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>9.2kW</b></li>
+                      <li>Rate Speed <b>90RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415 V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Nord Bevel</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Nord Universal SMI Worm Gear Motor">
+                    <h3>Nord Universal SMI Worm Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>4kW</b></li>
+                      <li>Rate Speed <b>90RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415 V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Universal SMI</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/edit_1.webp" alt="Nord V Belt Variator Gear Motor">
+                    <h3>Nord V Belt Variator Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>90kW</b></li>
+                      <li>Rate Speed <b>200RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415 V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>	V Belt</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Helical Worm Gear Motor">
+                    <h3>Helical Worm Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Oreintation <b>Horizontal</b></li>
+                      <li>Color <b>Grey</b></li>
+                      <li>Input speed <b>200V</b></li>
+                      <li>Country of Origin <b>Made in India</b></li>
+                      <li>Gear Type <b>Worm</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Worm Gear Motor">
+                    <h3>Worm Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Rate Speed <b>1440RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Industrial</b></li>
+                      <li>Voltage <b>220V</b></li>
+                      <li>oreintation <b>Horizontal</b></li>
+                       <li>Country of Origin <b>Made in India</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Nord Unicase Bevel Helical Bevel Gear Motor">
+                    <h3>Nord Unicase Bevel Helical Bevel Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>220Kw</b></li>
+                      <li>Rate Speed <b>90 RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Unicase Bevel</b></li>
+                      </ul>  
+                    </p>   
+                </div>
+                <div class="product-item">
+                    <img src="images/edit_1.webp" alt="Nord Bloc 1 Helical Inline Gear Motor">
+                    <h3>Nord Bloc 1 Helical Inline Gear Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>37Kw</b></li>
+                      <li>Rate Speed <b>1440 RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>440V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Bloc 1</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/helical-gear-box.webp" alt="Nord Standard Inline Helical Geared Motor">
+                    <h3>Nord Standard Inline Helical Geared Motor</h3>
+                      <p>
+                      <ul>
+                      <li>Power <b>7.5Kw</b></li>
+                      <li>Rate Speed <b>90 RPM</b></li>
+                      <li>Phase <b>Three Phase</b></li>
+                      <li>Usage/Application <b>Conveyors</b></li>
+                      <li>Voltage <b>415V</b></li>
+                      <li>Brand <b>Nord</b></li>
+                      <li>Model <b>Standard Inline</b></li>
+                      </ul>  
+                    </p>
+                </div>
+                <div class="product-item">
+                    <img src="images/edit_1.webp" alt="Electric Motor Gearbox">
+                    <h3>Electric Motor Gearbox</h3>
+                      <p>
+                      <ul>
+                      <li>Gear Type <b>worm</b></li>
+                      <li>Orientation <b>Horizontal</b></li>
+                      <li>Mounting <b>Flange</b></li>
+                      <li>Color <b>Grey</b></li>
+                       <li>Country of Origin <b>Made in India</b></li>
+                      </ul>  
+                    </p>
+                </div>
+           
             `;
             break;
         case 'helical':
@@ -488,31 +700,35 @@ function loadProductCategory(category) {
                 case 'variable-frequency-drive-inverter':
                   html += `
                       <div class="product-item">
-                          <img src="images/nord-dust-explosion-protected-motor2.webp" alt="Nord Gas Explosion Protected Motor">
-                          <h3>Nord Gas Explosion Protected Motor</h3>
+                          <img src="images/nord-pro-sk500e-vfd-inverter.webp" alt="Nord Pro SK500E VFD Inverter">
+                          <h3>Nord Pro SK500E VFD Inverter</h3>
                           <p>
                            <ul>
-                            <li>Power <b>22kW</b></li>
+                            <li>Power <b>160kW</b></li>
+                            <li>Usage <b>For Industrial Machinery</b></li>
                             <li>Brand <b>Nord</b></li>
-                            <li>Voltage <b>415V</b></li>
-                            <li>Frquency <b>50Hz</b></li>
-                            <li>Product Type <b>Gas Explosion Protected Motor</b></li>
+                            <li>Model <b>SK500E</b></li>
+                            <li>Protection Class <b>IP20 </b></li>
+                            <li>Voltage <b>480V</b></li>
                           </ul>  
                           </p>
                       </div>
                       <div class="product-item">
-                          <img src="images/nord-dust-explosion-protected-motor2.webp" alt="Nord Dust Explosion Protected Motor">
-                          <h3>Nord Dust Explosion Protected Motor</h3>
+                          <img src="images/nordac-pro-vfd.webp" alt="Nordac Pro SK 500P VFD">
+                          <h3>Nordac Pro SK 500P VFD</h3>
                           <p>
                            <ul>
-                            <li>Power <b>22kW</b></li>
+                            <li>Power Rating <b>0.33 kW 30 HP</b></li>
+                            <li>Input Voltage <b>415V</b></li>
+                            <li>Input Phase <b>3 Phase</b></li>
                             <li>Brand <b>Nord</b></li>
-                            <li>Voltage <b>415V</b></li>
-                            <li>Frquency <b>50Hz</b></li>
-                            <li>Product Type <b>Dust Explosion Protected Motor</b></li>
-                          </ul>  
+                            <li>Model <b>SK 500P</b></li>
+                            <li>Input Frequency <b>50 Hz</b></li>
+                            <li>Protection Class <b>IP20</b></li>
+                          </ul>                        
                           </p>
                       </div>
+
                   `;
                   break;
         default:
