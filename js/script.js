@@ -292,7 +292,7 @@ function loadProductCategory(category) {
         case 'nord-gear-motors':
             html += `
                 <div class="product-item">
-                    <img src="images/edit_1.webp" alt="Nord Unicase Inline Helical Geared Motors">
+                    <img src="images/nord-inline-helical-geared-motors.webp" alt="Nord Unicase Inline Helical Geared Motors">
                     <h3>Nord Unicase Inline Helical Geared Motors</h3>
                     <p>
                       <ul>
@@ -307,7 +307,7 @@ function loadProductCategory(category) {
                     </p>                 
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Nord Unicase Parallel Shaft Gear Motors">
+                    <img src="images/nord-unicase-parallel-shaft-gear-motors.webp" alt="Nord Unicase Parallel Shaft Gear Motors">
                     <h3>Nord Unicase Parallel Shaft Gear Motors</h3>
                     <p>
                       <ul>
@@ -322,7 +322,7 @@ function loadProductCategory(category) {
                     </p>   
                 </div>
                 <div class="product-item">
-                    <img src="images/edit_1.webp" alt="Nord B5010 DuoDrive Geared Motor">
+                    <img src="images/nord-b5010-duodrive-geared-motor.webp" alt="Nord B5010 DuoDrive Geared Motor">
                     <h3>Nord B5010 DuoDrive Geared Motor</h3>
                     <p>
                       <ul>
@@ -337,7 +337,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Nord Max Drive XC Right Angle Gear Motor">
+                    <img src="images/mr4.webp" alt="Nord Max Drive XC Right Angle Gear Motor">
                     <h3>Nord Max Drive XC Right Angle Gear Motor</h3>
                     <p>
                       <ul>
@@ -353,7 +353,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/edit_1.webp" alt="Nord Max Drive XC Parallel Shaft Gear Motor">
+                    <img src="images/maxxdrive-xc-parallel-gear-units.webp" alt="Nord Max Drive XC Parallel Shaft Gear Motor">
                     <h3>Nord Max Drive XC Parallel Shaft Gear Motor</h3>
                       <p>
                       <ul>
@@ -368,7 +368,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Nord Unicase Worm Gear Motor">
+                    <img src="images/hw2.webp" alt="Nord Unicase Worm Gear Motor">
                     <h3>Nord Unicase Worm Gear Motor</h3>
                       <p>
                       <ul>
@@ -383,7 +383,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/edit_1.webp" alt="Nord Bloc 1 Bevel Geared Motor">
+                    <img src="images/nordbloc-1-bevel-geared-motor.webp" alt="Nord Bloc 1 Bevel Geared Motor">
                     <h3>Nord Bloc 1 Bevel Geared Motor</h3>
                       <p>
                       <ul>
@@ -398,7 +398,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Nord Universal SMI Worm Gear Motor">
+                    <img src="images/nord-universal-worm-gear-motors.webp" alt="Nord Universal SMI Worm Gear Motor">
                     <h3>Nord Universal SMI Worm Gear Motor</h3>
                       <p>
                       <ul>
@@ -413,7 +413,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/edit_1.webp" alt="Nord V Belt Variator Gear Motor">
+                    <img src="images/v1.webp" alt="Nord V Belt Variator Gear Motor">
                     <h3>Nord V Belt Variator Gear Motor</h3>
                       <p>
                       <ul>
@@ -428,7 +428,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Helical Worm Gear Motor">
+                    <img src="images/helical-worm-gear-motor.webp" alt="Helical Worm Gear Motor">
                     <h3>Helical Worm Gear Motor</h3>
                       <p>
                       <ul>
@@ -441,7 +441,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Worm Gear Motor">
+                    <img src="images/worm-gear-motor.webp" alt="Worm Gear Motor">
                     <h3>Worm Gear Motor</h3>
                       <p>
                       <ul>
@@ -455,7 +455,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Nord Unicase Bevel Helical Bevel Gear Motor">
+                    <img src="images/nord-unicase-bevel-helical-bevel-gear-motor.webp" alt="Nord Unicase Bevel Helical Bevel Gear Motor">
                     <h3>Nord Unicase Bevel Helical Bevel Gear Motor</h3>
                       <p>
                       <ul>
@@ -470,7 +470,7 @@ function loadProductCategory(category) {
                     </p>   
                 </div>
                 <div class="product-item">
-                    <img src="images/edit_1.webp" alt="Nord Bloc 1 Helical Inline Gear Motor">
+                    <img src="images/nord-bloc-1-helical-inline-gear-motor.webp" alt="Nord Bloc 1 Helical Inline Gear Motor">
                     <h3>Nord Bloc 1 Helical Inline Gear Motor</h3>
                       <p>
                       <ul>
@@ -485,7 +485,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/helical-gear-box.webp" alt="Nord Standard Inline Helical Geared Motor">
+                    <img src="images/242163.webp" alt="Nord Standard Inline Helical Geared Motor">
                     <h3>Nord Standard Inline Helical Geared Motor</h3>
                       <p>
                       <ul>
@@ -500,7 +500,7 @@ function loadProductCategory(category) {
                     </p>
                 </div>
                 <div class="product-item">
-                    <img src="images/edit_1.webp" alt="Electric Motor Gearbox">
+                    <img src="images/electric-motor-gearbox.webp" alt="Electric Motor Gearbox">
                     <h3>Electric Motor Gearbox</h3>
                       <p>
                       <ul>
