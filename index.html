@@ -31,7 +31,7 @@
 <section id ="hero" class="hero">
   <h1>Premium Industrial Transmission Solutions</h1>
   <p>Reliable Gear Motors, Drive Systems & Transmission Products in Coimbatore</p>
-  <button class="btn" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+  <button class="btn" onclick="document.getElementById('name-field').scrollIntoView({behavior:'smooth',block:'center'})">Get a Quote</button>
 </section>
 
 <section id="about" class="content-section">
@@ -87,9 +87,9 @@
     <div class="partner-item">
       <img src="images/havells copy.jpg" alt="Partner 2 Logo" />
     </div>
-    <div class="partner-item">
+    <!--<div class="partner-item">
       <img src="images/seimens.png" alt="Partner 3 Logo" />
-    </div>
+    </div>-->
     <div class="partner-item">
       <img src="images/ele2.png" alt="Partner 4 Logo" />
     </div>
@@ -141,7 +141,7 @@
     <div class="form-card">
       <!-- (Insert your existing form code here, unmodified) -->
       <form id="contact-form" action="mailto:info@evergreentransmission.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" id="name-field" name="name" placeholder="Your Name" required>
         <input type="tel" name="mobile" id="mobile" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="Mobile Number (optional)">
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
@@ -163,7 +163,7 @@
 
 <!-- WhatsApp Floating Icon -->
 <a href="#" id="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  <img src="images/WhatsApp.svg" alt="WhatsApp" />
 </a>
 
 <!-- New round Back-to-Top below WhatsApp -->
@@ -177,6 +177,7 @@
   <a href="#">LinkedIn</a> | <a href="#">Facebook</a> | <a href="https://www.indiamart.com/evergreen-transmission/" target="_blank" rel="noopener">IndiaMart</a> | <a href="https://www.justdial.com/Coimbatore/Evergreen-Transmission-Opp-To-Fun-Mall-Peelamedu/0422PX422-X422-180626225033-V3W5_BZDET?cat_b2b_flag=&searchfrom=lst&bd=1&mncatname=Evergreen%20Transmission%20Anupperpalayam&ncatid=10182239&ftterm=Evergreen%20Transmission%20Anupperpalayam&thumbnail=" target="_blank">JustDial</a>
 </footer>
 
-  <script src="js/script.js"></script>
+<!-- Script -->
+<script src="js/script.js"></script>
 </body>
 </html>
