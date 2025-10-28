@@ -406,6 +406,71 @@ form button:hover { background: #c9e1c8; }
   filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
 }
 
+/*=========== customer carousel ============== */
+.customers-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  overflow: hidden; /* prevent cards spilling under arrows */
+  padding: 0 20px; /* give arrows breathing room */
+
+}
+
+.carousel-arrow {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.left-arrow::before,
+.right-arrow::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.left-arrow::before {
+  border-width: 20px 26px 20px 0;
+  border-color: transparent #3a8030 transparent transparent;
+}
+
+.right-arrow::before {
+  border-width: 20px 0 20px 26px;
+  border-color: transparent transparent transparent #3a8030;
+}
+
+.customers-track {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: max-content; /* allow full track width based on items */
+  transition: transform 0.6s ease;
+  padding: 0 40px; /* keeps first & last cards away from arrows */
+  box-sizing: border-box;
+}
+.customers-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.customers-carousel .customers-track::-webkit-scrollbar {
+  display: none;
+}
+/* Card sizing for carousel - default: 5 visible */
+.customer-item {
+  flex: 0 0 20%;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+
+
 /* ========== Footer ========== */
 
 footer {
@@ -509,6 +574,16 @@ footer {
   
   .contact-row { flex-direction: column; gap: 30px; }
   .contact-card, .form-card { max-width: 98vw; margin: 0 auto; }
+  .customers-track {
+    width: 100vw;
+  }
+  .customer-item {
+    flex: 0 0 100%;
+    margin: 0 7px;
+  }
+  .customers-carousel {
+    max-width: 100vw;
+  }
 }
 
 
