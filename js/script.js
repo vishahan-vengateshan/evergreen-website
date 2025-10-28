@@ -790,10 +790,10 @@ function loadProductCategory(category) {
 
   function resetAutoScroll() {
     clearTimeout(autoScrollTimer);
-    autoScrollTimer = setTimeout(autoScroll, 2000);
+    autoScrollTimer = setTimeout(autoScroll, 1500);
   }
 
-  autoScrollTimer = setTimeout(autoScroll, 2500);
+  autoScrollTimer = setTimeout(autoScroll, 1500);
 
   window.addEventListener('resize', () => {
     updateVisibleCards();
