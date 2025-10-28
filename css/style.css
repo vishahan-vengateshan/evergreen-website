@@ -102,7 +102,7 @@ body { padding-top: 92px; }
 /* Ensure in-page anchor scroll reveals H2 under sticky header */
 section,
 .content-section,
-#about, #products, #partners, #contact {
+#about, #products, #partners, #contact, #customers {
   scroll-margin-top: 110px; /* slightly larger than header height */
 }
 
@@ -220,11 +220,49 @@ section,
   max-width: 100%;
   max-height: 70px;
   object-fit: contain;
-  filter: grayscale(100%);
+  /*filter: grayscale(100%);*/
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .partner-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ========== Customer Section ========== */
+
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.customer-item {
+  flex: 0 1 150px;
+  background: white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customer-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.customer-item img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.customer-item img:hover {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
@@ -346,7 +384,7 @@ form button:hover { background: #c9e1c8; }
 }*/
 
 
-/* =========== WhatsApp Floating Button ========= */
+/* =========== WhatsApp Floating Button blink ========= */
 
 /*@keyframes whatsapp-blink {
   0%, 100% { background-color: white; }
@@ -410,10 +448,15 @@ footer {
   .partner-item { flex: 0 1 45%; margin-bottom: 15px; }
 
   .partner-item img,
-  .product-item img {
+  .product-item img,
+  .customer-item img
+  {
     filter: grayscale(0%);
     transform: none;
   }
+  .customers { flex-direction: row; justify-content: center; }
+
+  .customer-item { flex: 0 1 45%; margin-bottom: 15px; }
 
  
     /* Contact section: centered with safe gutters */
