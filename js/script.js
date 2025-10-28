@@ -739,3 +739,66 @@ function loadProductCategory(category) {
     window.scrollTo({ top: document.getElementById('products').offsetTop - 80, behavior: 'smooth' });
 }
 
+/* customer carousel function */
+
+(function setupCustomerCarousel() {
+  const carousel = document.querySelector('.customers-carousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.customers-track');
+  const leftArrow = carousel.querySelector('.left-arrow');
+  const rightArrow = carousel.querySelector('.right-arrow');
+  const cards = track.querySelectorAll('.customer-item');
+
+  let visibleCards = window.matchMedia('(max-width:700px)').matches ? 1 : 5;
+  let autoScrollTimer;
+  let scrollStep = 0;
+
+  function updateVisibleCards() {
+    visibleCards = window.matchMedia('(max-width:700px)').matches ? 1 : 5;
+    const card = cards[0];
+    if (card) {
+      const cardStyle = window.getComputedStyle(card);
+      scrollStep = card.offsetWidth + parseInt(cardStyle.marginLeft) + parseInt(cardStyle.marginRight);
+    }
+  }
+
+  function scrollToPosition(pos) {
+    track.scrollTo({ left: pos, behavior: 'smooth' });
+  }
+
+  updateVisibleCards();
+
+  leftArrow.addEventListener('click', () => {
+    track.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    resetAutoScroll();
+  });
+
+  rightArrow.addEventListener('click', () => {
+    track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    resetAutoScroll();
+  });
+
+  function autoScroll() {
+    if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - scrollStep) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    }
+    autoScrollTimer = setTimeout(autoScroll, 1000);
+  }
+
+  function resetAutoScroll() {
+    clearTimeout(autoScrollTimer);
+    autoScrollTimer = setTimeout(autoScroll, 1500);
+  }
+
+  autoScrollTimer = setTimeout(autoScroll, 1500);
+
+  window.addEventListener('resize', () => {
+    updateVisibleCards();
+  });
+
+  carousel.addEventListener('mouseenter', () => clearTimeout(autoScrollTimer));
+  carousel.addEventListener('mouseleave', resetAutoScroll);
+})();
