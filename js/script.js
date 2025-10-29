@@ -282,6 +282,8 @@ const initialProducts = document.querySelector('#products .products').innerHTML;
 function loadInitialProducts() {
     const productsContainer = document.querySelector('#products .products');
     productsContainer.innerHTML = initialProducts;
+      // Re-add "View More" buttons after content reload
+  addViewMoreButtons();
 }
 
 function loadProductCategory(category) {
@@ -802,3 +804,27 @@ function loadProductCategory(category) {
   carousel.addEventListener('mouseenter', () => clearTimeout(autoScrollTimer));
   carousel.addEventListener('mouseleave', resetAutoScroll);
 })();
+
+
+/* -----View more button logic --------*/
+/* -------- Add "View More" button only to initial product cards -------- */
+function addViewMoreButtons() {
+  const initialSection = document.querySelector('.initial-products');
+  if (!initialSection) return;
+
+  const productCards = initialSection.querySelectorAll('.product-item');
+  productCards.forEach(card => {
+    // Prevent duplicate button
+    if (card.querySelector('.view-more-btn')) return;
+
+    const btn = document.createElement('button');
+    btn.className = 'view-more-btn';
+    btn.textContent = 'View More';
+    btn.onclick = () => loadInitialProducts();
+
+    card.appendChild(btn);
+  });
+}
+
+// Run once on load
+document.addEventListener('DOMContentLoaded', addViewMoreButtons);

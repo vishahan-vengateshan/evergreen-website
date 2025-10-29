@@ -164,6 +164,9 @@ section,
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-item:hover {
@@ -176,6 +179,11 @@ section,
   height: auto;
   margin-bottom: 15px;
   transition: filter 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 0 auto;               /* center horizontally */
+  object-fit: contain;          /* maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
 }
 
 .product-item img:hover { transform: scale(1.05); }
@@ -190,6 +198,47 @@ section,
   text-align: left;
   margin-left: 0; /* Optional for proper left position */
   padding-left: 1.2em; /* Optional for standard bullet indent */
+}
+
+.view-more-btn {
+  background: #3a8030;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  margin-top: auto;
+  transition: background 0.3s ease;
+}
+
+/* =========view more button shortened =============
+.view-more-btn {
+  background: #3a8030;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  align-self: center;            
+  margin-top: auto;              
+  transition: background 0.3s ease;
+  white-space: nowrap;        
+}
+
+.view-more-btn:hover {
+  background: #2a6222;
+}
+
+*/
+
+
+.view-more-btn:hover {
+  background: #2a6222;
 }
 /* ========== Partner Section ========== */
 
@@ -294,6 +343,7 @@ section,
   margin: 20px 0 35px;
   font-size: 1.1em;
 }
+
 
 /* Keep form centered with a natural text alignment for fields on desktop */
 form {
