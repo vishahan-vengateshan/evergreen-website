@@ -15,7 +15,7 @@
 
   <header>
     <!--<img src="images/edited_logo.svg" alt="Evergreen Transmission Logo">-->
-    <a href="https://evergreentransmission.in" class="logo-link" aria-label="Go to top">
+    <a href="#hero" class="logo-link" aria-label="Go to top">
       <img src="images/Evergreen_Transmission_Logo_New.svg" alt="Evergreen Transmission Logo">
       </a>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
@@ -33,21 +33,43 @@
   </header>
 
 <!-- Hero -->
-<section id ="hero" class="hero"> 
-  <h1>Premium Industrial Transmission Solutions</h1>
-  <p>Reliable Gear Motors, Drive Systems & Transmission Products in Coimbatore</p>
-  <button class="btn" onclick="document.getElementById('name-field').scrollIntoView({behavior:'smooth',block:'center'})">Get a Quote</button>
+<section id ="hero" class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Industrial transmission partner in Coimbatore</p>
+    <h1>Premium Industrial Transmission Solutions</h1>
+    <p>Reliable gear motors, gearboxes, drive systems and transmission products backed by practical technical support.</p>
+    <div class="hero-actions">
+      <button class="btn" onclick="scrollToQuoteForm()">Get a Quote</button>
+      <a class="btn secondary-btn" href="#products" onclick="loadInitialProducts()">View Products</a>
+    </div>
+    <div class="hero-stats" aria-label="Evergreen Transmission highlights">
+      <div><strong>100+</strong><span>Trusted industry supply</span></div>
+      <div><strong>19+</strong><span>Customer brands served</span></div>
+      <div><strong>24h</strong><span>Quick response focus</span></div>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <img src="images/indus.jpg" alt="">
+  </div>
 </section>
 
 <section id="about" class="content-section">
-  <h2>About Evergreen Transmission</h2>
-  <p>Evergreen Transmission is a trusted leader in industrial transmission products based in Coimbatore, Tamil Nadu. Specializing in gear motors, gearboxes and drive systems, we provide reliable solutions designed to meet the demanding needs of manufacturing and industrial operations.</p>
-  <p>Our commitment to quality, competitive pricing, and expert technical support makes us a preferred partner for clients across Tamil Nadu and beyond.</p>
+  <div class="section-heading">
+    <span class="eyebrow">About Us</span>
+    <h2>About Evergreen Transmission</h2>
+  </div>
+  <div class="about-panel">
+    <p>Evergreen Transmission is a trusted leader in industrial transmission products based in Coimbatore, Tamil Nadu. Specializing in gear motors, gearboxes and drive systems, we provide reliable solutions designed to meet the demanding needs of manufacturing and industrial operations.</p>
+    <p>Our commitment to quality, competitive pricing, and expert technical support makes us a preferred partner for clients across Tamil Nadu and beyond.</p>
+  </div>
 </section>
 
 <!-- Products -->
 <section id="products" class="content-section">
-  <h2 id="our-products" onclick="loadInitialProducts()" style="cursor:pointer;">Our Products</h2>
+  <div class="section-heading">
+    <span class="eyebrow">Product Range</span>
+    <h2 id="our-products" onclick="loadInitialProducts()" style="cursor:pointer;">Our Products</h2>
+  </div>
   <div class="products initial-products">
     <div class="product-item" onclick="loadProductCategory('nord-gear-motors')">
       <img src="images/edit_1.webp" alt="Nord Gear Motors" />
@@ -84,7 +106,10 @@
 
 <!-- Partners -->
 <section id ="partners" class="content-section">
-  <h2>Our Brands</h2>
+  <div class="section-heading">
+    <span class="eyebrow">Authorized supply network</span>
+    <h2>Our Brands</h2>
+  </div>
   <div class="partners">
     <div class="partner-item">
       <img src="images/nord_image_new.jpeg" alt="Partner 1 Logo" />
@@ -95,11 +120,18 @@
     <div class="partner-item">
       <img src="images/crompton.webp" alt="Partner 4 Logo" />
     </div>
+    <div class="partner-item">
+      <img src="images/rotofluid.png" alt="Rotofluid Logo" />
+    </div>
+  </div>
 </section>
 
 <!-- Our customers -->
 <section id ="customers" class="content-section">
-  <h2>Our Customers</h2>
+  <div class="section-heading">
+    <span class="eyebrow">Trusted By</span>
+    <h2>Our Customers</h2>
+  </div>
   <div class="customers-carousel">
     <button class="carousel-arrow left-arrow" aria-label="Scroll left"></button>
     <div class="customers-track">
@@ -166,29 +198,53 @@
 </section>
 <!-- Why choose us -->
 <section class="content-section">
-  <h2>Why Choose Us</h2>
-  <ul>
-    <li>Extensive industry expertise and technical knowledge</li>
-    <li>Reliable and durable transmission products</li>
-    <li>Competitive pricing with excellent customer support</li>
-    <li>Local presence in Coimbatore with quick response times</li>
-  </ul>
+  <div class="section-heading">
+    <span class="eyebrow">Why Choose Us</span>
+    <h2>Built for Industrial Uptime</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span>01</span>
+      <h3>Technical Product Knowledge</h3>
+      <p>Support for choosing gear motors, gearboxes and drive systems that match real operating conditions.</p>
+    </div>
+    <div class="why-card">
+      <span>02</span>
+      <h3>Durable Product Range</h3>
+      <p>Transmission products selected for dependable industrial performance and long service life.</p>
+    </div>
+    <div class="why-card">
+      <span>03</span>
+      <h3>Competitive Supply</h3>
+      <p>Balanced pricing, responsive coordination and practical support from enquiry to delivery.</p>
+    </div>
+    <div class="why-card">
+      <span>04</span>
+      <h3>Local Response</h3>
+      <p>Coimbatore presence for faster communication across Tamil Nadu and nearby industrial regions.</p>
+    </div>
+  </div>
 </section>
 
 <!-- Testimonials -->
 <section class="content-section">
-  <h2>Customer Testimonials</h2>
-  <div class="testimonial">
-    “We rely on Evergreen Transmission for their high-quality gear motors that have delivered dependable performance in our cement plants .A trusted partner in every project.” – Dalmia Cement Operations Team
+  <div class="section-heading">
+    <span class="eyebrow">Customer Voice</span>
+    <h2>Customer Testimonials</h2>
   </div>
-  <div class="testimonial">
-    “The reliability and efficiency of Evergreen Transmission products have consistently supported our power generation needs. Their support makes our engineering solutions seamless.” – BHEL Procurement Division
-  </div>
-  <div class="testimonial">
-    “Evergreen Transmission delivered robust solutions for our dairy automation systems, backed by their prompt service and technical expertise.” – Hatsun Agro Maintenance Team
-  </div>
-  <div class="testimonial">
-    “Our experience with Evergreen Transmission has been outstanding, their gear motors play a vital role in keeping our production lines running smoothly, and their quick response is truly appreciated.” – TNPL Engineering Department
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      “We rely on Evergreen Transmission for their high-quality gear motors that have delivered dependable performance in our cement plants. A trusted partner in every project.” – Dalmia Cement Operations Team
+    </div>
+    <div class="testimonial">
+      “The reliability and efficiency of Evergreen Transmission products have consistently supported our power generation needs. Their support makes our engineering solutions seamless.” – BHEL Procurement Division
+    </div>
+    <div class="testimonial">
+      “Evergreen Transmission delivered robust solutions for our dairy automation systems, backed by their prompt service and technical expertise.” – Hatsun Agro Maintenance Team
+    </div>
+    <div class="testimonial">
+      “Our experience with Evergreen Transmission has been outstanding, their gear motors play a vital role in keeping our production lines running smoothly, and their quick response is truly appreciated.” – TNPL Engineering Department
+    </div>
   </div>
 </section>
 
