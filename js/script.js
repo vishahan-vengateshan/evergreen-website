@@ -828,3 +828,20 @@ function addViewMoreButtons() {
 
 // Run once on load
 document.addEventListener('DOMContentLoaded', addViewMoreButtons);
+
+window.scrollToQuoteForm = function scrollToQuoteForm() {
+  const form = document.getElementById('contact-form');
+  const header = document.querySelector('header');
+  if (!form) return;
+
+  const headerHeight = header ? header.getBoundingClientRect().height : 0;
+  const formRect = form.getBoundingClientRect();
+  const availableHeight = window.innerHeight - headerHeight - 32;
+  const extraSpace = Math.max(0, availableHeight - formRect.height);
+  const scrollTop = window.scrollY + formRect.top - headerHeight - 16 - (extraSpace / 2);
+
+  window.scrollTo({
+    top: Math.max(0, scrollTop),
+    behavior: 'smooth'
+  });
+};
